@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        input{
+               padding:10px;
+<!--               text-align:center-->
+        }
+        form{
+               text-align:center
+        }
+        h1{
+        color:aqua;
+            text-align:center
+        }
+
+    </style>
+</head>
+<body style="background-image:url('https://demishia.com/wp-content/uploads/2018/04/admin-login-background-images-8.jpg')">
+<h1>LOGIN</h1>
+<form action="login" method="post">
+{% csrf_token %}
+    <input size="35" type="text" name="username" placeholder="Username"><br><br>
+        <input size="35" type="password" name="password" placeholder="Password"><br><br>
+    <input size="20" type="submit">
+
+
+
+</form>
+</body>
+</html>

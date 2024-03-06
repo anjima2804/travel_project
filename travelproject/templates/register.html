@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{ padding:10px;
+
+                 }
+        form{ text-align:center
+
+        }
+        h1{
+        color:pink;
+            text-align:center;
+
+        }
+
+    </style>
+</head>
+<body style="background-image:url('https://www.sagatraining.ca/wp-content/uploads/2018/10/background-images-for-login-form-8.jpg')">
+<h1>REGISTRATION</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <input size="40" type="text" name="username" placeholder="Enter your name "><br><br>
+        <input size="40" type="text" name="first_name" placeholder="Enter your first name "><br><br>
+    <input size="40" type="text" name="last_name" placeholder="Enter your last name "><br><br>
+    <input size="40" type="email" name="email" placeholder="Enter your email adress "><br><br>
+    <input size="40" type="password" name="password" placeholder="Enter your password "><br><br>
+    <input size="40" type="password" name="password1" placeholder="confirm your password "><br><br>
+    <input size="30" type="submit">
+
+
+</form>
+    {% for msg in messages %}
+    {{msg}}
+    {% endfor %}
+</body>
+</html>
